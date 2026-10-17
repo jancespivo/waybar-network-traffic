@@ -1,7 +1,7 @@
 [package]
 name = "waybar-network-traffic"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [profile.release]
 codegen-units = 1
@@ -10,3 +10,12 @@ strip = true
 
 [dependencies]
 ping-rs = "0.1.2"
+
+[lints.rust]
+unsafe_code = "forbid"
+unreachable_pub = "warn"
+
+[lints.clippy]
+let_underscore_must_use = "forbid"
+todo = "warn"
+unwrap_used = "deny"
